@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import functions
+from functions import *
 
 def getVariable(cabeceras, df):
     # Asignamos la primera columna con listado
@@ -79,7 +79,7 @@ if __name__ == "__main__":
 
         if (len(nombresSelected) == 2) & (len(metricasSelected) >= 3):
             #Creamos radar
-            plt, df_final = functions.createRadar(df, metricasSelected,nombresSelected)
+            plt, df_final = createRadar(df, metricasSelected,nombresSelected)
             st.pyplot(plt)
             st.table(df_final.reset_index(drop=True))
 

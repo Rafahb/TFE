@@ -54,7 +54,6 @@ def getValueComparate(df, nombresSelected):
 
 def getRanges(df, params):
     ranges = []
-    print(params)
     for x in params:
         a = min(df[params][x])
         a = a - (a * .25)
